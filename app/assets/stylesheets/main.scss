@@ -1,3 +1,16 @@
-// Place all the styles related to the main controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+.center {
+  margin: 0px auto;
+}
+
+.header {
+  width: 400px;
+}
+
+.posts-wrap {
+  width: 400px;
+  text-align: left;
+}
+
+.post-wrap {
+  margin: 0px auto 20px auto;
+}

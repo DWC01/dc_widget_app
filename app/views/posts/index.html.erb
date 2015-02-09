@@ -1,0 +1,21 @@
+<div class="center header">
+  <h1>
+    Recent Posts
+  </h1>
+</div>
+
+<div class="center posts-wrap">
+  <% @posts.each_with_index do |post, index| %>
+    <div class="post-wrap">
+      <div>
+        <%= post.name %>
+      </div>
+      <div> 
+       <%= post.content %>
+      </div>
+      <div>
+        <%= post.created_at %>
+      </div>
+    </div>
+  <% end %>
+</div>

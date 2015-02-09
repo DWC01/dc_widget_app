@@ -1,10 +1,10 @@
 (function() {
     var html = '\
-    <form method="post" action="http://localhost:3001/api/messages" class="daves-widget-form">\
+    <form method="post" action="http://localhost:3001/api/posts" class="daves-widget-form">\
       <div class="daves-widget-form-content">\
         <p class="daves-widget-form-title" > App Form </p>\
-        <input class="daves-widget-form-message" name="message[name]" type="text" placeholder="name">\
-        <input class="daves-widget-form-message" name="message[content]" type="text" placeholder="message">\
+        <input class="daves-widget-form-message" name="post[name]" type="text" placeholder="name">\
+        <input class="daves-widget-form-message" name="post[content]" type="text" placeholder="message">\
         <button class="daves-widget-form-submit">Submit</button>\
       </div>\
     </form>';
@@ -62,7 +62,7 @@
     $(document).ready(function() {
       var addMessage = function(e) {
         $.ajax({
-          url: 'http://localhost:3001/api/messages',
+          url: 'http://localhost:3001/api/posts',
           type: 'post',
           dataType: 'json',
           data: $(e.target).serialize()
