@@ -1,5 +1,4 @@
 (function() {
-    
     var loadScript = function(url, callback) {
       var script = document.createElement('script');
       script.async = true;script.src = url;
@@ -40,9 +39,7 @@
             console.log(error);
           });
         }
-
       });
-
     });
     
     var html = '<form method="post" class="daves-widget-form"><div class="daves-widget-form-content"><p class="daves-widget-form-title" > App Form </p><input class="daves-widget-form-message" name="post[name]" type="text" placeholder="your name"><input class="daves-widget-form-message" name="post[content]" type="text" placeholder="your post"><button class="daves-widget-form-submit">Submit</button></div></form>';
@@ -76,7 +73,6 @@
         css = css + '.daves-widget-form .daves-widget-form-title {color:' + dcWidget_formTitleColor + ';}'
       }
     }
-
 
     createFormTag();
     setCustomStyle();
