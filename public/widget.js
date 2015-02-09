@@ -1,7 +1,7 @@
 (function() {
 
     var html = '\
-    <form method="post" action="https://dc-widget-app.herokuapp.com/api/posts" class="daves-widget-form">\
+    <form method="post" class="daves-widget-form">\
       <div class="daves-widget-form-content">\
         <p class="daves-widget-form-title" > App Form </p>\
         <input class="daves-widget-form-message" name="post[name]" type="text" placeholder="your name">\
@@ -118,7 +118,7 @@
     $(document).ready(function() {
       var addMessage = function(e) {
         $.ajax({
-          url: 'http://localhost:3001/api/posts',
+          url: 'https://dc-widget-app.herokuapp.com/api/posts',
           type: 'post',
           dataType: 'json',
           data: $(e.target).serialize()
