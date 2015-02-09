@@ -3,17 +3,17 @@ module Api
     respond_to :json
 
     def create
-      message = Message.new(dashboard_params)
+      post = Post.new(post_params)
 
-      if message.save
-        render json: message 
+      if post.save
+        render json: post 
       end
 
     end
     
     private
-      def dashboard_params
-        params.require(:message).permit(:content, :name)
+      def post_params
+        params.require(:post).permit(:content, :name)
       end
   end
 end
