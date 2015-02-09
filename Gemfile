@@ -10,7 +10,6 @@ gem 'jquery-rails'
 gem 'pg'
 gem 'rack-cors', '0.3.0'
 
-
 group :development, :test do
   gem 'better_errors'
   gem 'binding_of_caller'
@@ -18,5 +17,6 @@ end
 
 group :production do
   gem 'rails_12factor'
+  gem 'rails_serve_static_assets'
 end
 
