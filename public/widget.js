@@ -32,7 +32,16 @@
       }
     } 
 
-    var addMessage = function(e) {
+
+
+    $(document).ready(function() {
+      
+      $('.daves-widget-form').on("submit", function(e) {
+        e.preventDefault();
+        addMessage(e);
+      });
+      
+      var addMessage = function(e) {
         $.ajax({
           url: 'https://dc-widget-app.herokuapp.com/api/posts',
           type: 'post',
@@ -46,14 +55,6 @@
           console.log(error);
         });
       };
-
-
-    $(document).ready(function() {
-      
-      $('.daves-widget-form').on("submit", function(e) {
-        e.preventDefault();
-        addMessage(e);
-      });
 
     });
 
