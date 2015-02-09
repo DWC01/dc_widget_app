@@ -30,13 +30,19 @@
       if (typeof dcWidget_formTitleColor !== 'undefined' ) {
         css = css + '.daves-widget-form .daves-widget-form-title {background-color:' + dcWidget_formTitleColor + ';}'
       }
-    } 
+    }
+
+    createFormTag();
+    createStyleTag();    
+    setCustomStyle();
 
     $(document).ready(function() {
+      
       $('.daves-widget-form').on("submit", function(e) {
         e.preventDefault();
         addMessage(e);
       });
+
       var addMessage = function(e) {
         $.ajax({
           url: 'https://dc-widget-app.herokuapp.com/api/posts',
@@ -50,10 +56,8 @@
           console.log('Fail');  
           console.log(error);
         });
-      };
+      }
+
     });
-    createStyleTag();    
-    setCustomStyle();
-    createFormTag();
 
 })();
