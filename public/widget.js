@@ -1,7 +1,7 @@
 (function() {
 
     var html = '\
-    <form method="post" action="http://localhost:3001/api/posts" class="daves-widget-form">\
+    <form method="post" action="https://dc-widget-app.herokuapp.com/api/posts" class="daves-widget-form">\
       <div class="daves-widget-form-content">\
         <p class="daves-widget-form-title" > App Form </p>\
         <input class="daves-widget-form-message" name="post[name]" type="text" placeholder="your name">\
@@ -100,9 +100,6 @@
     if (typeof dcWidget_formTitleColor !== 'undefined' ) {
       css = css + '.daves-widget-form .daves-widget-form-title {color:' + dcWidget_formTitleColor + ';}'
     }
-
-    
-
 
     // Create Style Element
     var style = document.createElement('style');
